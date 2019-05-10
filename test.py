@@ -10,17 +10,18 @@ app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
-
     print("Request:")
     print(json.dumps(req, indent=4))
-    res = {
-        "fulfillmentText": "This is a text response FUCKKKKKKKKKKKKKKKKKKKKKKKKKKK"
-    }
-    res = json.dumps(res, indent=4)
-    r = make_response(res)
-    
-    r.headers['Content-Type'] = 'application/json'
-    return r
+    if req.get("queryResult").get("action") != "find.age":
+        return {}
+    else:
+        res = {
+            "fulfillmentText": "This is a text response FUCKKKKKKKKKKKKKKKKKKKKKKKKKKK"
+        }
+        res = json.dumps(res, indent=4)
+        r = make_response(res)
+        r.headers['Content-Type'] = 'application/json'
+        return r
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
