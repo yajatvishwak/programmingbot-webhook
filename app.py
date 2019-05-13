@@ -108,17 +108,17 @@ def startupTechApp():
      oss = req.get("queryResult").get("parameters").get("os")
      res =  {"fulfillmentText": "Apps"}
      if oss == 'windows':
-         res =  {"fulfillmentText": "windows app"}
+         res =  {"fulfillmentText": "Windows application development requires you to work with VB and C#, Getting your bascis right in either one language seems like a good deal. IDE which I would prefer is Visual Studio. Happy Learning! :)"}
      elif oss == 'android':
-         res =  {"fulfillmentText": "android app"}
+         res =  {"fulfillmentText": "Java and Kotlin go behind making an app for Andriod. The best way to start learning this is any one of the Google's course. Learning about databases and a little about how the web fuctions might help you in your future work. To make your work easier, check out Flutter. Happy Learning :)"}
      elif oss == 'mac':
-         res =  {"fulfillmentText": "mac app"}
+         res =  {"fulfillmentText": "Swift is a programming language used by developers to make application for the osX. It closely relates to C# and Java. However, learning only Swift will confine you to the Apple ecospace. I would suggest to pick up another language alongwith Swift for instance, Java, Python, C# or JavaScript. Happy Learning :) "}
      elif oss == 'apple':
-         res =  {"fulfillmentText": "ios mob app"}
+         res =  {"fulfillmentText": "Making an app for the Apple Store is real biggie. Languages like Swift should help you make the most beautiful apps in iOS. Happy learning :) "}
      elif oss == 'linux':
-         res =  {"fulfillmentText": "linux app"}
+         res =  {"fulfillmentText": "C, Python, Pearl, Ruby and some of the languages you can pick up to make a Linux application. A firm command on the UNIX system and terminals is also suggested. Happy learning :)"}
      else:
-         res =  {"fulfillmentText": "python"}   
+         res =  {"fulfillmentText": "Python is light-weight all in one programming lanugage. It is being used in various fields and has a vast community. Starting off here will make your life a whole lot easier."}   
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -126,7 +126,7 @@ def startupTechApp():
 
 
 def startupTechGame():
-     res = {"fulfillmentText": "Game development lang"}
+     res = games()
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -134,14 +134,14 @@ def startupTechGame():
 
 
 def startupTechEle():
-     res = {"fulfillmentText": "Ele arudiono and raspberrypi development lang"}
+     res = {"fulfillmentText": "There has never been a single language used for programming robots and electronic devices. Many languages are used for that purpose and often enough more than one in a single project. Robots can be programmed using pretty much any programming language. C/C++ and Python are very common.As for Electronic devices, there are 2 groups. The first one being embeding a little code to a chip driver with a light-weight, low-level language, often Assembly or C. The second group is interfacing with the device, for this you can learn C/C++, Python, MatLab, Java."}
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
      return webhookreply
 
 def startupNonTech():
-     res = {"fulfillmentText": "static websites generators"}
+     res = {"fulfillmentText": "HTML, CSS and JavaScript are the languages that will help you start off your website from scratch. Although if you just want to blog or simply make websites, using a Site generator is a better go. For instance, Wordpress or Wix."}
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -149,7 +149,7 @@ def startupNonTech():
 
 
 def startupNonTechAI():
-     res = {"fulfillmentText": "ai lang"}
+     res = {"fulfillmentText": "Artifical Intelligence is growing field. You should probably consider Python or R as your goto languages. Companies values these developers too and there's a great job opportunity. Learning Maths and Statistics woul enhance your skill in this field. Happy learning :)"}
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -163,14 +163,14 @@ def startupNonTechGames():
      return webhookreply
 
 def startupNonTechCrypto():
-     res =  {"fulfillmentText": "game dev"}
+     res =  {"fulfillmentText": "Hacking and Cracking requires a lot of problem solving apporach to learn. There are no courses for these which would get you started off ASAP. Considering ethical hacking requires you to be a know-it-all in how systems function. SQL and Java with terminal interfaces and concepts of probablity may help to some extent. Another suggestion is to take a professional Ethical Hacking Course. Happy Learning :)"}
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
      return webhookreply
 
 def startupNonTechEnterprise():
-     res =  {"fulfillmentText": "enterprise"}
+     res =  {"fulfillmentText": "Be it looking for job or better your self with another programing language, the market is under steady acceleration. Many enterprise can be made with Python or Java or C# or Javascript. Starting off with one of these languages gives you a headstart in your job interviews. Happy learning :) "}
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -179,19 +179,19 @@ def startupNonTechEnterprise():
 def startupNonTechApps():
      req = request.get_json(silent= True, force= True)
      oss = req.get("queryResult").get("parameters").get("os")
-     res =  {"fulfillmentText": "Apps"}
+    
      if oss == 'windows':
-         res =  {"fulfillmentText": "windows app"}
+         res =  {"fulfillmentText": "Windows application development requires you to work with VB and C#, Getting your bascis right in either one language seems like a good deal. IDE which I would prefer is Visual Studio. Happy Learning! :)"}
      elif oss == 'android':
-         res =  {"fulfillmentText": "android app"}
+         res =  {"fulfillmentText": "Java and Kotlin go behind making an app for Andriod. The best way to start learning this is any one of the Google's course. Learning about databases and a little about how the web fuctions might help you in your future work. To make your work easier, check out Flutter. Happy Learning :)"}
      elif oss == 'mac':
-         res =  {"fulfillmentText": "mac app"}
+         res =  {"fulfillmentText": "Swift is a programming language used by developers to make application for the osX. It closely relates to C# and Java. However, learning only Swift will confine you to the Apple ecospace. I would suggest to pick up another language alongwith Swift for instance, Java, Python, C# or JavaScript. Happy Learning :) "}
      elif oss == 'apple':
-         res =  {"fulfillmentText": "ios mob app"}
+         res =  {"fulfillmentText": "Making an app for the Apple Store is real biggie. Languages like Swift should help you make the most beautiful apps in iOS. Happy learning :) "}
      elif oss == 'linux':
-         res =  {"fulfillmentText": "linux app"}
+         res =  {"fulfillmentText": "C, Python, Pearl, Ruby and some of the languages you can pick up to make a Linux application. A firm command on the UNIX system and terminals is also suggested. Happy learning :)"}
      else:
-         res =  {"fulfillmentText": "python"}   
+         res =  {"fulfillmentText": "Python is light-weight all in one programming lanugage. It is being used in various fields and has a vast community. Starting off here will make your life a whole lot easier."}     
      res = json.dumps(res,indent=4)
      webhookreply = make_response(res)
      webhookreply.headers['Content-Type'] = 'application/json'
@@ -202,10 +202,10 @@ def startupNonTechApps():
 
 #Response functions
 def websitesuite():
-     return {"fulfillmentText": "Web suite Python html Css Js Databases and Node.js"}
+     return {"fulfillmentText": "Learn HTML, CSS, and Javascript. Before you do any kind of server-side programming, this is a must. You can't build a webpage without HTML, CSS makes it look pretty, and JS makes it dynamic. Also, it wouldn't hurt to add on some jQuery. Install a web server, or find a free web host online. You don't need to pay for one. You're still learning. Personally, I have a WAMP server running on my desktop since I don't put anything into production, and I advise you to do the same. Learn a server-side scripting language. For server side programming, Python is said to be the easiest to learn. PHP is the most well used server-side language. Ruby is an phenom. Get coding! I cannot stress this enough. Once you are confident with the basics, do check out Node.js and other popular Javascript modules. The only way to learn is by doing. You can't just read a book."}
 
 def games():
-     return {"fulfillmentText": "game dev"}
+     return {"fulfillmentText": "Programming a game is a hge task, "}
 
 
      
